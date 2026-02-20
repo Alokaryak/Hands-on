@@ -18,7 +18,7 @@ public class SwitchCases {
                 System.out.println("Three");
                 break;
             default:
-                System.out.println("Zero");
+                System.out.println("Unknown");
         }
     }
 }
