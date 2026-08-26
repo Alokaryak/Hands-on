@@ -33,4 +33,21 @@ library(tidyverse)
 #Things to remember while working with tidyverse
 # 1. Every column of the data frame is a unique variable
 # 2. Every row is an unique observation, each row will have an unique key and purpose
+# 3. Only keep what you need in a data set
+
+filter(data.00, cyl == 4) # row sub-setting function
+select(data.00, mpg, cyl) # column sub-setting function
+
+
+data.00 %>% # pipe operator or piping operator
+  filter(cyl == 4)
+
+data.00 %>% 
+  select(disp,mpg,qsec) %>%
+  filter(disp == 160, qsec == 16.46)
+
+# Creating something new
+data.00 %>%
+  mutate(mpg.per.cyl = mpg/cyl)
+
 
