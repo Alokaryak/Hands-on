@@ -48,6 +48,13 @@ data.00 %>%
 
 # Creating something new
 data.00 %>%
-  mutate(mpg.per.cyl = mpg/cyl)
+  mutate(mpg.per.cyl = mpg/cyl) %>%
+  group_by(cyl) %>%
+  summarise(mean.mpg.per.cyl = mean(mpg.per.cyl))
 
+# Quick Plot
+plot(x = data.00$cyl, y = data.00$mpg, xlab = 'Cylinders', ylab = 'Miles Per Gallon', col = 'red', 
+     main = 'MPG by Number of Cylinders')
 
+### LAB 1 INTRO
+data00.mpg
