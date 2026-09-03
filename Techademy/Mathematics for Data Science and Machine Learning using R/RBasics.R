@@ -57,4 +57,19 @@ plot(x = data.00$cyl, y = data.00$mpg, xlab = 'Cylinders', ylab = 'Miles Per Gal
      main = 'MPG by Number of Cylinders')
 
 ### LAB 1 INTRO
-data00.mpg
+#Loading the mpg dataset and assigning it to a data frame called data01
+data.01 <- mpg
+#1. View the first 6 observations of the data. Do this in two different ways.
+data.01[1:6,]
+head(data.01)
+#2. What is the average of 'cty' for compact cars?
+data.01 %>%
+  select (cty, class) %>%
+  filter(class == 'compact') #my_solution
+
+#3. Create a new dataframe that has five variables: manufacturer, class, cyl, mean.hwy and hwy.per.cyl
+
+data.03 <- data.01 %>%
+            select(manufacturer, class, cyl, mean(hwy))
+
+                   
