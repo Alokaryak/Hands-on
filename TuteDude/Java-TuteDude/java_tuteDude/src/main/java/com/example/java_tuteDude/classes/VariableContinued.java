@@ -13,11 +13,11 @@ public class VariableContinued {
 
         //long data type
 
-        long aa = 100000000000L;
+        long aa = 1000000000000000000L;
 
         // range of long is 64 bits :: -2^63 to 2^63
 
-        // long also takes up more memory as compared
+        // long also takes up more memory as compared to an int
 
         short num = 10000;
 
@@ -25,7 +25,7 @@ public class VariableContinued {
 
         // takes up less space as compared to int or long
 
-        byte num1 = 100;
+        byte num1 = 127;
 
         // range of byte is 8 bits :: -2^7 to 2^7
 

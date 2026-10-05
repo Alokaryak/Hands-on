@@ -5,7 +5,8 @@ import java.sql.SQLOutput;
 public class Variable {
     public static void main(String[] args) {
 
-        int x;
+        int x = Integer.parseInt("100");
+        System.out.println("Value of x is "+ String.valueOf(x));
         x=2;  //put the value 2 in the bucket named x
         x+=2; // find the value of x+2
         x*=2; // find the value of 2*x
